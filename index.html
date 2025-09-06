@@ -3,637 +3,798 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supernova.TI - Transformando Ideias em Código</title>
-    <meta name="description" content="Agência de tecnologia especializada em desenvolvimento web, mobile e soluções personalizadas. Transformamos ideias em realidade digital.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <title>Supernova.ti - Criação de Sites Profissionais</title>
+    <meta name="description" content="Agência especializada em criação de sites profissionais. Transformamos suas ideias em experiências digitais incríveis.">
+    <meta name="author" content="Supernova.ti">
+    <meta name="keywords" content="criação de sites, desenvolvimento web, sites profissionais, agência digital">
+
+    <meta property="og:title" content="Supernova.ti - Criação de Sites Profissionais">
+    <meta property="og:description" content="Agência especializada em criação de sites profissionais. Transformamos suas ideias em experiências digitais incríveis.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="header-content">
-                <!-- Logo -->
-                <a href="#home" class="logo">
-                    <div class="logo-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
-                        </svg>
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header id="header" class="header">
+            <div class="container-custom">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="header-logo">
+                        <a href=""></a><h1 class="logo-text">Supernova.ti</h1>
                     </div>
-                    <span class="logo-text">Supernova.TI</span>
-                </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="nav-desktop">
-                    <a href="#home" class="nav-link active">Home</a>
-                    <a href="#sobre" class="nav-link">Sobre</a>
-                    <a href="#servicos" class="nav-link">Serviços</a>
-                    <a href="#portfolio" class="nav-link">Portfólio</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </nav>
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <button onclick="scrollToSection('inicio')" class="nav-link">Início</button>
+                        <button onclick="scrollToSection('sobre')" class="nav-link">Sobre</button>
+                        <button onclick="scrollToSection('servicos')" class="nav-link">Serviços</button>
+                        <button onclick="scrollToSection('precos')" class="nav-link">Preços</button>
+                        <button onclick="scrollToSection('blog')" class="nav-link">Blog</button>
+                        <button onclick="scrollToSection('contato')" class="nav-link">Contato</button>
+                    </nav>
 
-                <!-- CTA Button -->
-                <div class="cta-desktop">
-                    <a href="#contato" class="btn-primary">Fale Conosco</a>
-                </div>
+                    <!-- Desktop CTA Buttons -->
+                    <div class="desktop-cta">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-calculator"></i>
+                            <a href="/sobre.html" class="f456">Sobre nós</a>
+                        </button>
+                        <a href="https://wa.me/5511999999999" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
 
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="mobile-menu">
-            <div class="container">
-                <div class="mobile-nav">
-                    <a href="#home" class="mobile-nav-link">Home</a>
-                    <a href="#sobre" class="mobile-nav-link">Sobre</a>
-                    <a href="#servicos" class="mobile-nav-link">Serviços</a>
-                    <a href="#portfolio" class="mobile-nav-link">Portfólio</a>
-                    <a href="#contato" class="mobile-nav-link">Contato</a>
-                    <a href="#contato" class="btn-primary">Fale Conosco</a>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <nav class="mobile-nav">
+                        <button onclick="scrollToSection('inicio')" class="mobile-nav-link">
+                            <i class="fas fa-home"></i>
+                            Início
+                        </button>
+                        <button onclick="scrollToSection('sobre')" class="mobile-nav-link">
+                            <i class="fas fa-info-circle"></i>
+                            Sobre
+                        </button>
+
+                        <button onclick="scrollToSection('servicos')" class="mobile-nav-link">
+                            <i class="fas fa-cogs"></i>
+                            Serviços
+                        </button>
+                        <button onclick="scrollToSection('precos')" class="mobile-nav-link">
+                            <i class="fas fa-tag"></i>
+                            Preços
+                        </button>
+                        <button onclick="scrollToSection('blog')" class="mobile-nav-link">
+                            <i class="fas fa-newspaper"></i>
+                            Blog
+                        </button>
+                        <button onclick="scrollToSection('contato')" class="mobile-nav-link">
+                            <i class="fas fa-envelope"></i>
+                            Contato
+                        </button>
+                    </nav>
+
+                    <div class="mobile-cta">
+                        <button onclick="scrollToSection('orcamentos')" class="btn btn-outline btn-full">
+                            <i class="fas fa-calculator"></i>
+                            <a href="/sobre.html" class="f456">Sobre nós</a>
+                        </button>
+                        <a href="https://wa.me/5511999999999" class="btn btn-primary btn-full">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-bg">
-                <div class="hero-gradient-1"></div>
-                <div class="hero-gradient-2"></div>
-                <div class="hero-gradient-3"></div>
-            </div>
-            
-            <div class="container">
-                <div class="hero-content">
+        <section id="inicio" class="hero-section">
+            <!-- Background Effects -->
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-float-1"></div>
+            <div class="hero-float-2"></div>
+            <div class="hero-float-3"></div>
+
+            <div class="container-custom hero-content">
+                <div class="hero-inner">
+                    <!-- Badge -->
                     <div class="hero-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"></path>
-                            <path d="M18 3l-.5 1.5-1.5.5 1.5.5.5 1.5.5-1.5 1.5-.5-1.5-.5L18 3Z"></path>
-                            <path d="M19.5 8.5l-.5 1-.5-.5 1-.5.5-1 .5 1 1 .5-1 .5-.5 1Z"></path>
-                        </svg>
-                        <span>Inovação em Tecnologia</span>
+                        <div class="hero-badge-dot"></div>
+                        <span class="hero-badge-text">
+                            Agência especializada em criação de sites profissionais
+                        </span>
+                        <div class="hero-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
                     </div>
-                    
+
+                    <!-- Main Heading -->
                     <h1 class="hero-title">
-                        <span class="gradient-text">Supernova.TI</span><br>
-                        <span>Transformando</span><br>
-                        <span>Ideias em Código</span>
+                        Transformando <span class="gradient-text">Ideias</span><br>
+                        em Sites <span class="gradient-text">Profissionais</span>
                     </h1>
-                    
-                    <p class="hero-description">
-                        Somos especialistas em desenvolver soluções tecnológicas inovadoras 
-                        que impulsionam seu negócio para o futuro digital.
+
+                    <!-- Subtitle -->
+                    <p class="hero-subtitle">
+                        Especialistas em desenvolvimento de sites e softwares. 
+                        Criamos experiências digitais que convertem visitantes em clientes.
                     </p>
-                    
+
+                    <!-- CTA Buttons -->
                     <div class="hero-buttons">
-                        <a href="#contato" class="btn-primary btn-lg">
-                            Iniciar Projeto
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
-                        </a>
-                        <a href="#portfolio" class="btn-secondary btn-lg">
-                            Ver Portfólio
-                        </a>
+                        <button onclick="scrollToSection('cta-orcamento')" class="btn btn-primary btn-lg btn-glow hover-lift">
+                            <i class="fas fa-rocket"></i>
+                            Solicitar Orçamento Gratuito
+                        </button>
+                        <button onclick="scrollToSection('como-funciona')" class="btn btn-outline btn-lg">
+                            <i class="fas fa-eye"></i>
+                            Veja como funciona
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-card hover-lift">
+                            <div class="stat-number gradient-text">20+</div>
+                            <div class="stat-label">Sites Criados</div>
+                        </div>
+                        <div class="stat-card hover-lift">
+                            <div class="stat-number gradient-text">2+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-card hover-lift">
+                            <div class="stat-number gradient-text">100%</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                    </div>
+
+                    <!-- Scroll Indicator -->
+                    <div class="hero-scroll">
+                        <button onclick="scrollToSection('sobre')" class="scroll-btn">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Floating Elements -->
-            <div class="floating-elements">
-                <div class="floating-dot dot-1"></div>
-                <div class="floating-dot dot-2"></div>
-                <div class="floating-dot dot-3"></div>
-                <div class="floating-dot dot-4"></div>
+            <!-- Decorative Elements -->
+            <div class="hero-decor-1">
+                <i class="fas fa-code"></i>
             </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="servicos" class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="gradient-text">Nossos Serviços</span>
-                    </h2>
-                    <p class="section-description">
-                        Oferecemos soluções completas em tecnologia para impulsionar seu negócio
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                                <path d="M2 12h20"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Desenvolvimento Web</h3>
-                        <p class="service-description">
-                            Sites e aplicações web modernas, responsivas e de alta performance.
-                        </p>
-                        <div class="service-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">TailwindCSS</span>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                                <path d="M12 18h.01"></path>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Aplicações Mobile</h3>
-                        <p class="service-description">
-                            Apps nativos e híbridos para iOS e Android com experiência excepcional.
-                        </p>
-                        <div class="service-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Swift</span>
-                            <span class="tag">Kotlin</span>
-                        </div>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="service-title">Sistemas Personalizados</h3>
-                        <p class="service-description">
-                            Soluções sob medida para otimizar processos e aumentar produtividade.
-                        </p>
-                        <div class="service-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number gradient-text">100+</div>
-                        <div class="stat-label">Projetos Entregues</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number gradient-text">50+</div>
-                        <div class="stat-label">Clientes Satisfeitos</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number gradient-text">5+</div>
-                        <div class="stat-label">Anos de Experiência</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number gradient-text">24/7</div>
-                        <div class="stat-label">Suporte Técnico</div>
-                    </div>
-                </div>
+            <div class="hero-decor-2">
+                <i class="fas fa-laptop-code"></i>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="sobre" class="about">
-            <div class="container">
+        <section id="sobre" class="section-padding">
+            <div class="container-custom">
                 <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="gradient-text">Sobre a Supernova.TI</span>
-                    </h2>
-                    <p class="section-description">
-                        Somos uma agência de tecnologia apaixonada por transformar ideias em soluções digitais inovadoras.
+                    <h2 class="section-title">Sobre a Supernova.ti</h2>
+                    <p class="section-subtitle">
+                        Somos uma agência digital especializada em criar experiências web incríveis. 
+                        Nossa missão é transformar suas ideias em sites profissionais que geram resultados.
                     </p>
                 </div>
 
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Impulsionar negócios através da <span class="gradient-text">tecnologia</span></h3>
-                        <p>
-                            Acreditamos que a tecnologia é o catalisador para transformar ideias em realidade. 
-                            Nossa missão é desenvolver soluções digitais que não apenas atendam às necessidades 
-                            atuais, mas que também preparem nossos clientes para o futuro.
-                        </p>
-                        <p>
-                            Cada projeto é uma oportunidade de criar algo excepcional, combinando criatividade, 
-                            inovação e as melhores práticas de desenvolvimento para entregar resultados que 
-                            realmente fazem a diferença.
-                        </p>
-                    </div>
+                <div class="about-grid">
+                    <!-- Company Stats -->
                     <div class="about-stats">
                         <div class="about-stat">
-                            <div class="about-stat-number">100+</div>
-                            <div class="about-stat-label">Projetos Entregues</div>
+                            <div class="about-stat-number">30+</div>
+                            <div class="about-stat-label">Projetos Finalizados</div>
                         </div>
                         <div class="about-stat">
-                            <div class="about-stat-number">50+</div>
-                            <div class="about-stat-label">Clientes Satisfeitos</div>
+                            <div class="about-stat-number">2</div>
+                            <div class="about-stat-label">Anos no Mercado</div>
                         </div>
                         <div class="about-stat">
-                            <div class="about-stat-number">5+</div>
-                            <div class="about-stat-label">Anos de Experiência</div>
+                            <div class="about-stat-number">15+</div>
+                            <div class="about-stat-label">clientes satisfeiotos</div>
                         </div>
-                        <div class="about-stat">
-                            <div class="about-stat-number">24/7</div>
-                            <div class="about-stat-label">Suporte Técnico</div>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="features-grid">
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3 class="feature-title">Performance Otimizada</h3>
+                            <p class="feature-description">Sites ultra-rápidos com carregamento em menos de 3 segundos</p>
+                        </div>
+
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Design Responsivo</h3>
+                            <p class="feature-description">Perfeita adaptação em todos os dispositivos e telas</p>
+                        </div>
+
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="feature-title">SEO Otimizado</h3>
+                            <p class="feature-description">Apareça no topo do Google com nossas técnicas de SEO</p>
+                        </div>
+
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Segurança Avançada</h3>
+                            <p class="feature-description">Proteção total contra ataques e vulnerabilidades</p>
+                        </div>
+
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="feature-title">Suporte 24/7</h3>
+                            <p class="feature-description">Atendimento especializado sempre que você precisar</p>
+                        </div>
+
+                        <div class="feature-card hover-lift">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="feature-title">Analytics Integrado</h3>
+                            <p class="feature-description">Acompanhe o desempenho do seu site em tempo real</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Values -->
+                <div class="values-section">
+                    <h3 class="values-title">Nossos Valores</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="value-title">Paixão</h4>
+                            <p class="value-description">Amamos o que fazemos e isso se reflete em cada projeto</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4 class="value-title">Excelência</h4>
+                            <p class="value-description">Buscamos sempre a melhor solução para nossos clientes</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 class="value-title">Parceria</h4>
+                            <p class="value-description">Trabalhamos junto com você para alcançar seus objetivos</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="gradient-text">O que dizem nossos clientes</span>
-                    </h2>
-                </div>
-
-                <div class="testimonials-container">
-                    <div class="testimonial-item active">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">
-                                <!-- SUBSTITUA src="path/to/client1.jpg" pela imagem do cliente -->
-                                <img src="public/placeholder.svg" alt="João Silva" class="client-image">
-                            </div>
-                            <p class="testimonial-text">
-                                "A Supernova.TI transformou nossa visão em realidade. Resultado excepcional!"
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-name">João Silva</div>
-                                <div class="author-position">CEO • TechCorp</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">
-                                <!-- SUBSTITUA src="path/to/client2.jpg" pela imagem do cliente -->
-                                <img src="public/placeholder.svg" alt="Maria Santos" class="client-image">
-                            </div>
-                            <p class="testimonial-text">
-                                "Equipe altamente qualificada e comprometida. Superaram nossas expectativas."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-name">Maria Santos</div>
-                                <div class="author-position">CTO • StartupXYZ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-card">
-                            <div class="testimonial-avatar">
-                                <!-- SUBSTITUA src="path/to/client3.jpg" pela imagem do cliente -->
-                                <img src="public/placeholder.svg" alt="Pedro Costa" class="client-image">
-                            </div>
-                            <p class="testimonial-text">
-                                "Parceria estratégica que nos levou a um novo patamar tecnológico."
-                            </p>
-                            <div class="testimonial-author">
-                                <div class="author-name">Pedro Costa</div>
-                                <div class="author-position">Diretor • InovaTech</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-dots">
-                    <button class="dot" data-index="0"></button>
-                    <button class="dot active" data-index="1"></button>
-                    <button class="dot" data-index="2"></button>
-                </div>
+            <section id="servicos" class="section-padding">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">
+                    Oferecemos soluções completas para impulsionar a sua presença digital.
+                    Explore nossos serviços.
+                </p>
             </div>
-        </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">
-                        <span class="gradient-text">Nosso Portfólio</span>
-                    </h2>
-                    <p class="section-description">
-                        Conheça alguns dos projetos incríveis que desenvolvemos para nossos clientes
+            <div class="services-grid">
+                <div class="service-card hover-lift">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Sites Estáticos</h3>
+                    <p class="service-description">
+                        Sites ultrarrápidos, seguros e otimizados para performance.
                     </p>
-                </div>
-
-                <div class="portfolio-grid">
-                    <!-- PROJETO 1 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project1.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 1">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 1</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJETO 2 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project2.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 2">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 2</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Vue.js</span>
-                                <span class="tag">Express</span>
-                                <span class="tag">PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJETO 3 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project3.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 3">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 3</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">React Native</span>
-                                <span class="tag">Firebase</span>
-                                <span class="tag">TypeScript</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJETO 4 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project4.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 4">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 4</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Flutter</span>
-                                <span class="tag">Django</span>
-                                <span class="tag">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJETO 5 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project5.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 5">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 5</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Next.js</span>
-                                <span class="tag">TailwindCSS</span>
-                                <span class="tag">Prisma</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PROJETO 6 - SUBSTITUA com seus dados -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <!-- SUBSTITUA src="path/to/project6.jpg" pela imagem do projeto -->
-                            <img src="public/placeholder.svg" alt="Nome do Projeto 6">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-links">
-                                    <a href="#" class="portfolio-link" title="Ver projeto">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                            <polyline points="15,3 21,3 21,9"></polyline>
-                                            <line x1="10" x2="21" y1="14" y2="3"></line>
-                                        </svg>
-                                    </a>
-                                    <a href="#" class="portfolio-link" title="Ver código">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3 class="portfolio-title">Nome do Projeto 6</h3>
-                            <p class="portfolio-description">Descrição breve do projeto e tecnologias utilizadas.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">WordPress</span>
-                                <span class="tag">PHP</span>
-                                <span class="tag">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contato" class="contact">
-            <div class="container">
-                <div class="placeholder-content">
-                    <div class="placeholder-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
-                    <h2 class="gradient-text">Entre em Contato</h2>
-                    <p>Vamos conversar sobre como podemos transformar sua ideia em realidade.</p>
-                    <div class="placeholder-box">
-                        <p>Esta seção está em desenvolvimento. Em breve, você encontrará aqui 
-                        conteúdo completo e detalhado sobre como entrar em contato.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Pronto para transformar sua ideia em realidade?</h2>
-                    <p>Entre em contato conosco e descubra como podemos impulsionar seu projeto</p>
-                    <a href="#contato" class="btn-white btn-lg">
-                        Fale Conosco Agora
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-company">
-                    <a href="#home" class="footer-logo">
-                        <div class="logo-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
-                            </svg>
-                        </div>
-                        <span class="logo-text">Supernova.TI</span>
-                    </a>
-                    <p class="footer-description">
-                        Transformamos ideias em soluções tecnológicas inovadoras. 
-                        Especialistas em desenvolvimento web, mobile e consultorias em TI.
-                    </p>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Velocidade máxima</li>
+                        <li><i class="fas fa-check-circle"></i> Segurança avançada</li>
+                        <li><i class="fas fa-check-circle"></i> Melhor desempenho em SEO</li>
+                        <li><i class="fas fa-check-circle"></i> Baixo custo de manutenção</li>
                     </ul>
+                    <button onclick="scrollToSection('contato')" class="btn btn-primary btn-full service-cta">
+                        <i class="fas fa-calculator"></i>
+                        Solicitar Orçamento
+                    </button>
                 </div>
 
-                <!-- Contact Info -->
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <div class="contact-info">
-                        <p>contato@supernova.ti</p>
-                        <p>+55 (11) 9999-9999</p>
-                        <p>São Paulo, SP</p>
+                <div class="service-card hover-lift">
+                    <div class="service-icon">
+                        <i class="fab fa-wordpress"></i>
                     </div>
+                    <h3 class="service-title">Sites WordPress</h3>
+                    <p class="service-description">
+                        Sites flexíveis e escaláveis com a maior plataforma de gerenciamento do mundo.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Painel de controle amigável</li>
+                        <li><i class="fas fa-check-circle"></i> Fácil atualização de conteúdo</li>
+                        <li><i class="fas fa-check-circle"></i> Milhares de plugins e temas</li>
+                        <li><i class="fas fa-check-circle"></i> Ideal para blogs e portfólios</li>
+                    </ul>
+                    <button onclick="scrollToSection('contato')" class="btn btn-primary btn-full service-cta">
+                        <i class="fas fa-calculator"></i>
+                        Solicitar Orçamento
+                    </button>
                 </div>
-            </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Supernova.TI. Todos os direitos reservados.</p>
+                <div class="service-card hover-lift">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-title">Software sob Demanda</h3>
+                    <p class="service-description">
+                        Desenvolvimento de sistemas personalizados para atender suas necessidades.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Soluções exclusivas</li>
+                        <li><i class="fas fa-check-circle"></i> Escalabilidade e robustez</li>
+                        <li><i class="fas fa-check-circle"></i> Integrações complexas</li>
+                        <li><i class="fas fa-check-circle"></i> Suporte e evolução contínua</li>
+                    </ul>
+                    <button onclick="scrollToSection('contato')" class="btn btn-outline btn-full service-cta">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar com Especialista
+                    </button>
+                </div>
             </div>
         </div>
-    </footer>
+        </section>
 
-    <script src="script.js"></script>
+
+
+        <!-- How It Works Section -->
+        <section id="como-funciona" class="section-padding bg-muted">
+            <div class="container-custom">
+                <div class="section-header">
+                    <h2 class="section-title">Como Funciona</h2>
+                    <p class="section-subtitle">
+                        Nosso processo é simples, transparente e focado em resultados. 
+                        Veja como transformamos sua ideia em realidade.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card hover-lift">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="step-title">Conversa Inicial</h3>
+                        <p class="step-description">Entendemos suas necessidades, objetivos e público-alvo</p>
+                    </div>
+
+                    <div class="step-connector desktop-only"></div>
+
+                    <div class="step-card hover-lift">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3 class="step-title">Planejamento</h3>
+                        <p class="step-description">Criamos a estratégia, wireframes e definimos tecnologias</p>
+                    </div>
+
+                    <div class="step-connector desktop-only"></div>
+
+                    <div class="step-card hover-lift">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-description">Desenvolvemos layouts únicos e experiência de usuário</p>
+                    </div>
+
+                    <div class="step-connector desktop-only"></div>
+
+                    <div class="step-card hover-lift">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div></a>
+                        <h3 class="step-title">Desenvolvimento</h3>
+                        <p class="step-description">Programamos seu site com as melhores tecnologias</p>
+                    </div>
+
+                    <div class="step-connector desktop-only"></div>
+
+                    <div class="step-card hover-lift">
+                        <div class="step-number">5</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="step-title">Lançamento</h3>
+                        <p class="step-description">Colocamos seu site no ar e garantimos que tudo funcione</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Timeline -->
+                <div class="mobile-timeline mobile-only" >
+                    <div class="timeline-line"></div>
+                    <!-- Steps repeated for mobile layout -->
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-section" id="cta-orcamento">
+                    <h3 class="cta-title">Pronto para começar seu projeto?</h3 >
+                    <p class="cta-description">
+                        Entre em contato conosco e receba uma proposta personalizada em até 24 horas.
+                    </p>
+                    <div class="cta-buttons">
+                        <button onclick="scrollToSection('orcamentos')" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calculator"></i>
+                            Solicitar Orçamento
+                        </button>
+                        <a href="https://wa.me/5511999999999" class="btn btn-outline btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                
+
+        <!--preços-->
+        <section id="precos" class="section-padding bg-muted">
+    <div class="container-custom">
+        <div class="section-header">
+            <h2 class="section-title">Planos & Preços</h2>
+            <p class="section-subtitle">
+                Escolha o plano ideal para o seu projeto e impulsione o seu negócio no mundo digital.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card hover-lift">
+                <div class="card-header">
+                    <h3 class="card-title">Plano Básico</h3>
+                    <p class="card-subtitle">Ideal para começar</p>
+                </div>
+                <div class="card-price">
+                    <span class="gradient-text">R$497,97</span>
+                    <span class="price-period">/única vez</span>
+                </div>
+                <ul class="card-features">
+                    <li><i class="fas fa-check-circle"></i> Design Personalizado</li>
+                    <li><i class="fas fa-check-circle"></i> 5 Páginas</li>
+                    <li><i class="fas fa-check-circle"></i> Otimização SEO Básica</li>
+                    <li><i class="fas fa-check-circle"></i> Integração com Google Analytics</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte por 30 dias</li>
+                </ul>
+                <button onclick="scrollToSection('contato')" class="btn btn-primary btn-full card-cta">
+                    <i class="fas fa-calculator"></i>
+                    Solicitar Orçamento
+                </button>
+            </div>
+
+            <div class="pricing-card featured hover-lift">
+                <div class="popular-badge">Mais Popular</div>
+                <div class="card-header">
+                    <h3 class="card-title">Plano Profissional</h3>
+                    <p class="card-subtitle">Crescimento acelerado</p>
+                </div>
+                <div class="card-price">
+                    <span class="gradient-text">R$997,97</span>
+                    <span class="price-period">/única vez</span>
+                </div>
+                <ul class="card-features">
+                    <li><i class="fas fa-check-circle"></i> Todos os recursos do Plano Básico</li>
+                    <li><i class="fas fa-check-circle"></i> Até 15 Páginas</li>
+                    <li><i class="fas fa-check-circle"></i> Otimização SEO Avançada</li>
+                    <li><i class="fas fa-check-circle"></i> Blog Integrado</li>
+                    <li><i class="fas fa-check-circle"></i> Painel Administrativo</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte prioritário por 60 dias</li>
+                </ul>
+                <button onclick="scrollToSection('contato')" class="btn btn-primary btn-full card-cta">
+                    <i class="fas fa-rocket"></i>
+                    Contratar Plano
+                </button>
+            </div>
+
+            <div class="pricing-card hover-lift">
+                <div class="card-header">
+                    <h3 class="card-title">Plano Personalizado</h3>
+                    <p class="card-subtitle">Soluções exclusivas</p>
+                </div>
+                <div class="card-price">
+                    <span class="gradient-text">Sob Consulta</span>
+                    <span class="price-period">/por projeto</span>
+                </div>
+                <ul class="card-features">
+                    <li><i class="fas fa-check-circle"></i> E-commerce Completo</li>
+                    <li><i class="fas fa-check-circle"></i> Desenvolvimento de Aplicativos</li>
+                    <li><i class="fas fa-check-circle"></i> Sistemas Web Customizados</li>
+                    <li><i class="fas fa-check-circle"></i> Integrações de Terceiros</li>
+                    <li><i class="fas fa-check-circle"></i> Suporte e Manutenção Contínuos</li>
+                </ul>
+                <button onclick="scrollToSection('contato')" class="btn btn-outline btn-full card-cta">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Especialista
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+        <!--fim do preço-->
+"
+
+        <!-- Blog Section -->
+        <section id="blog" class="section-padding">
+            <div class="container-custom">
+                <div class="section-header">
+                    <h2 class="section-title">Blog & Notícias</h2>
+                    <p class="section-subtitle">
+                        Fique por dentro das últimas tendências do mundo digital e dicas exclusivas para seu negócio.
+                    </p>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card hover-lift">
+                        <div class="blog-image">
+                            <img src="/assets/img/img-tendencia-sites-2024.jpg" alt="">
+                            <div class="blog-category">Tendências</div>
+                            <div class="blog-overlay">
+                                <button class="blog-btn"><a href="/noticias/tendencias-sites-2024.html">Ler Mais</a></button>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    22 de Janeiro, 2024
+                                </span>
+                                <span class="blog-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min de leitura
+                                </span>
+                            </div>
+                            <h3 class="blog-title">A Revolução dos Sites em 2024: Tendências que Vão Transformar seu Negócio</h3>
+                            <p class="blog-excerpt">
+                                Descubra as principais tendências de web design e desenvolvimento que estão moldando 
+                                o futuro dos sites em 2024 e como isso pode impactar seu negócio...
+                            </p>
+                            <div class="blog-footer">
+                                <div class="blog-author">
+                                    <div class="author-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span class="author-name">Equipe Supernova.ti</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Web Design</span>
+                                    <span class="blog-tag">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card hover-lift">
+                        <div class="blog-image">
+                            <img src="/assets/img/img-tendencia-sites-2024.jpg" alt="">
+                            <div class="blog-category">Tendências</div>
+                            <div class="blog-overlay">
+                                <button class="blog-btn"><a href="/noticias/criacao-site-negocio.html">Ler Mais</a></button>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">
+                                    <i class="fas fa-calendar"></i>
+                                    22 de Janeiro, 2024
+                                </span>
+                                <span class="blog-reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    5 min de leitura
+                                </span>
+                            </div>
+                            <h3 class="blog-title">Como um Site Profissional Impulsiona seu Negócio</h3>
+                            <p class="blog-excerpt">
+                                No cenário competitivo de hoje, ter uma presença digital sólida não é mais um diferencial, 
+                            mas uma necessidade...
+                            </p>
+                            <div class="blog-footer">
+                                <div class="blog-author">
+                                    <div class="author-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span class="author-name">Equipe Supernova.ti</span>
+                                </div>
+                                <div class="blog-tags">
+                                    <span class="blog-tag">Web Design</span>
+                                    <span class="blog-tag">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding bg-muted">
+            <div class="container-custom">
+                <div class="section-header">
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-subtitle">
+                        Tire suas dúvidas sobre nossos serviços e processos. 
+                        Se não encontrar a resposta, entre em contato conosco!
+                    </p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Quanto tempo leva para desenvolver um site?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O tempo de desenvolvimento varia de acordo com a complexidade do projeto. Um site institucional simples pode ficar pronto em 7-15 dias, enquanto um e-commerce ou sistema mais complexo pode levar de 30 a 60 dias. Definimos um cronograma detalhado na fase de planejamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Vocês oferecem suporte após a entrega?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Oferecemos 3 meses de suporte gratuito após a entrega, incluindo correções de bugs, pequenos ajustes e orientações. Também temos planos de manutenção mensal para quem deseja suporte contínuo e atualizações regulares.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>O site será responsivo (mobile-friendly)?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutamente! Todos os nossos sites são desenvolvidos com design responsivo, garantindo perfeita visualização em smartphones, tablets e desktops. Testamos em diversos dispositivos e navegadores antes da entrega.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Vocês cuidam da hospedagem e domínio?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, cuidamos de tudo! Oferecemos hospedagem premium com SSL gratuito, backups automáticos e CDN global. Também ajudamos na escolha e registro do domínio. Você não precisa se preocupar com aspectos técnicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Posso fazer alterações no site depois de pronto?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Claro! Desenvolvemos sites com painéis administrativos intuitivos onde você pode atualizar conteúdos, imagens e informações facilmente. Para alterações mais complexas, nossa equipe está sempre disponível para ajudar.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Qual é a forma de pagamento?</span>
+                            <i class="fas fa-chevron-down faq-arrow"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Trabalhamos com parcelamento flexível: 50% no início do projeto e 50% na entrega. Aceitamos cartão, PIX, transferência bancária e boleto. Para projetos maiores, podemos negociar condições especiais de pagamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ CTA -->
+                <div class="faq-cta" id="contato">
+                    <h3 class="cta-title">Ainda tem dúvidas?</h3>
+                    <p class="cta-description">
+                        Nossa equipe está pronta para esclarecer qualquer questão sobre seu projeto.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5511999999999" class="btn btn-primary btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            Conversar no WhatsApp
+                        </a>
+                        <button onclick="scrollToSection('orcamentos')" class="btn btn-outline btn-lg">
+                            <i class="fas fa-calculator"></i>
+                            Solicitar Orçamento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container-custom">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <h3 class="logo-text">Supernova.ti</h3>
+                            <p class="footer-description">
+                                Transformando ideias em experiências digitais incríveis. 
+                                Sua parceira na jornada digital.
+                            </p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/supernova.ti/" class="social-link" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/supernova.ti/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/eneias-santos" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://wa.me/98984114361" class="social-link" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <!--<a href="#" class="social-link"><i class="fab fa-youtube"></i></a>-->
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4 class="footer-title">Serviços</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html#servicos" class="footer-link">Criação de Sites</a></li>
+                            <li><a href="index.html#servicos" class="footer-link">E-commerce</a></li>
+                            <li><a href="index.html#servicos" class="footer-link">SEO</a></li>
+                            <li><a href="index.html#servicos" class="footer-link">Manutenção</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 class="footer-title">Empresa</h4>
+                        <ul class="footer-links">
+                            <li><a href="sobre.html" class="footer-link">Sobre Nós</a></li>
+                            <li><a href="index.html#blog" class="footer-link">Blog</a></li>
+                            <li><a href="index.html#contato" class="footer-link">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 class="footer-title">Contato</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item"><i class="fas fa-phone"></i><span>(98) 98411-4361</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i><span>eneias.supernovati@gmail.com</span></div>
+                            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>São Luis, MA - Brasil</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p class="footer-copyright">
+                            © 2024 Supernova.ti. Todos os direitos reservados.
+                        </p>
+                        <div class="footer-bottom-links">
+                            <a href="/privacidade-termos.html" class="footer-bottom-link">Política de Privacidade</a>
+                            <a href="/privacidade-termos.html" class="footer-bottom-link">Termos de Uso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
